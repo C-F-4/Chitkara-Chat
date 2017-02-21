@@ -6,7 +6,8 @@
   "dependencies": {
     "angular": "^1.6.2",
     "bounce.js": "^0.8.2",
-    "express.js": "^1.0.0"
+    "express.js": "^1.0.0",
+    "mongoose": "^4.8.4"
   },
   "devDependencies": {},
   "scripts": {

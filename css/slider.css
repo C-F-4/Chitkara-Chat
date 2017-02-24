@@ -1,0 +1,114 @@
+.wrap {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  color: #000;
+  background: url('../InProgress/png/mp-05.png') repeat;
+}
+
+.top-left {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.navigation {
+  background: #fff;
+  width: 100%;
+  border-bottom: 3px solid #fff;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15), 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
+  z-index: 9;
+}
+
+.navigation label {
+  color: #000;
+  cursor: pointer;
+  display: inline-block;
+  width: 24%;
+  margin: 0;
+  padding: 0;
+}
+
+.slider-btn-element {
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0px 20px;
+  transition: all .1s linear;
+  font-weight: bold;
+}
+
+.slider-btn-element:active {
+  box-shadow: 0 2px 0 #006599;
+  transform: translateY(3px);
+}
+
+.slide {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 6;
+  padding: 8em 1em;
+  background-color: #120103;
+  background-position: 50% 50%;
+  background-size: cover;
+  -webkit-transition: left .75s ease-out;
+  -moz-transition: left .75s ease-out;
+  transition: left .75s ease-out;
+}
+
+.slide-one {
+  background: url('../InProgress/png/mp-01.png');
+}
+
+.slide-two {
+  background: url('../InProgress/png/mp-02.png');
+}
+
+.slide-three {
+  background: url('../InProgress/png/mp-03.png');
+}
+
+.slide-four {
+  background: url('../InProgress/png/mp-04.png');
+}
+
+[id^="slide"]:checked + .slide {
+  left: 0;
+  z-index: 7;
+  -webkit-transition: left .65s ease-out;
+  -moz-transition: left .65s ease-out;
+  transition: left .65s ease-out;
+}
+
+.slide header {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform .5s .5s, opacity .5s;
+}
+
+[id^="slide"]:checked + .slide header {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s 0.5s;
+}
+
+[id^="slide-"]:checked + nav label {
+  border-bottom: 2px solid red;
+}
+
+.hide-me {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}

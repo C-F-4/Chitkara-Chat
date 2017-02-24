@@ -131,3 +131,10 @@ h1 {
   top: -1px;
   content: "...";
 }
+
+@media only screen and (max-width: 460px) {
+  form button {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+}

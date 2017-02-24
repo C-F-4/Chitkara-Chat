@@ -112,3 +112,15 @@
   top: -9999px !important;
   left: -9999px !important;
 }
+
+@media only screen and (max-width: 460px) {
+  nav.navigation label span{
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 460px) {
+  nav.navigation label i{
+    display: none;
+  }
+}

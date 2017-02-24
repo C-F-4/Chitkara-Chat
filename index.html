@@ -23,6 +23,7 @@
     <link type="text/css" rel="stylesheet" href="css/index-styles.css" />
     <link type="text/css" rel="stylesheet" href="css/loader.css" />
     <link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link type="text/css" rel="stylesheet" href="css/slider.css" />
     <!--Form Styles-->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css" />
@@ -48,10 +49,10 @@
         <!--Slider-->
         <div class="wrap">
             <nav class="top-left navigation">
-                <label for="slide-1-trigger" class="slider-btn-element waves-effect waves-teal">Home</label>
-                <label for="slide-2-trigger" class="slider-btn-element waves-effect waves-teal">Sign Up</label>
-                <label for="slide-3-trigger" class="slider-btn-element waves-effect waves-teal">Log In</label>
-                <label for="slide-4-trigger" class="slider-btn-element waves-effect waves-teal">Contact Us</label>
+                <label for="slide-1-trigger" class="slider-btn-element waves-effect waves-teal"><i class="fa fa-home fa-2x" aria-hidden="true"></i><span>Home</span></label>
+                <label for="slide-2-trigger" class="slider-btn-element waves-effect waves-teal"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i><span>Sign Up</span></label>
+                <label for="slide-3-trigger" class="slider-btn-element waves-effect waves-teal"><i class="fa fa-sign-in fa-2x" aria-hidden="true"></i><span>Log In</span></label>
+                <label for="slide-4-trigger" class="slider-btn-element waves-effect waves-teal"><i class="fa fa-users fa-2x" aria-hidden="true"></i><span>Contact Us</span></label>
             </nav>
             <input id="slide-1-trigger" class="hide-me" type="radio" name="slides" checked="true" />
             <section class="slide slide-one">
@@ -87,7 +88,7 @@
                                 <p class="alert alert-danger" ng-show="form-register.password.$error.minlength || form.password.$invalid">Your password must be at least 6 characters.</p>
                                 <div class="space-top text-center">
                                     <button ng-disabled="form-register.$invalid" class="waves-effect waves-light btn done btn-signup">
-                                        <i class="material-icons right">send</i> Submit
+                                        <i class="material-icons left">send</i> Submit
                                     </button>
                                     <button type="reset" class="waves-effect waves-light btn cancel">
                                         <i class="material-icons left">clear_all</i>Reset
@@ -120,7 +121,7 @@
                                 <p class="alert alert-danger" ng-show="form-login.login-password.$error.minlength || form-login.login-password.$invalid">Your password must be at least 6 characters.</p>
                                 <div class="space-top text-center">
                                     <button ng-disabled="form-login.$invalid" class="waves-effect waves-light btn done">
-                                        <i class="material-icons right">send</i> Submit
+                                        <i class="material-icons left">send</i> Submit
                                     </button>
                                     <button type="reset" class="waves-effect waves-light btn cancel">
                                         <i class="material-icons left">clear_all</i>Reset

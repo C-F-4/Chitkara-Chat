@@ -2,177 +2,197 @@
 <html lang="en-US">
 
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <meta name="keywords" content="" />
-    <meta name="google" value="notranslate" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTf-8" />
-    <meta property="og:title" content="" />
-    <meta property="og:description" content="" />
-    <meta property="og:site_name" content="" />
-    <meta property="og:url" content="" />
-    <title>
-        Chitkara Chat
-    </title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <meta name="keywords" content="" />
+  <meta name="google" value="notranslate" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTf-8" />
+  <meta property="og:title" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:url" content="" />
+  <title>
+    Chitkara Chat
+  </title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
-    <!--Stylesheets-->
-    <link type="text/css" rel="stylesheet" href="css/normalize.css" />
-    <link type="text/css" rel="stylesheet" href="css/index-styles.css" />
-    <link type="text/css" rel="stylesheet" href="css/loader.css" />
-    <link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link type="text/css" rel="stylesheet" href="css/slider.css" />
-    <!--Form Styles-->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/material-icons.css" />
-    <link rel="stylesheet" type="text/css" href="css/form.css" />
-    <!--Scripts-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="js/index-scripts.js"></script>
+  <!--Stylesheets-->
+  <link type="text/css" rel="stylesheet" href="css/normalize.css" />
+  <link type="text/css" rel="stylesheet" href="css/index-styles.css" />
+  <link type="text/css" rel="stylesheet" href="css/loader.css" />
+  <link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link type="text/css" rel="stylesheet" href="css/slider.css" />
+  <!--Form Styles-->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css" />
+  <!--link rel="stylesheet" type="text/css" href="css/material-icons.css" /--><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/form.css" />
+  <!--Landing Page Styles-->
+  <link rel="stylesheet" type="text/css" href="css/landing.css" />
+
+  <!--Styles to override previous ones-->
+  <style>
+  </style>
+  <!--Scripts-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="js/index-scripts.js"></script>
 </head>
 
 <body>
-    <!--Loader-->
-    <div id="loader-wrapper">
-        <span id="loader-percent" class="section-middle"></span>
-        <div id="loader"></div>
-        <div class="loader-section section-left"></div>
-        <div class="loader-section section-right"></div>
-    </div>
+  <!--Loader-->
+  <div id="loader-wrapper">
+    <span id="loader-percent" class="section-middle"></span>
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+  </div>
 
-    <!--Container-->
-    <div id="content">
-        <!--Slider-->
-        <div class="wrap">
-            <nav class="top-left navigation">
-                <label for="slide-1-trigger" class="slider-btn-element waves-effect waves-teal"><i class="fa fa-home fa-2x" aria-hidden="true"></i><span>Home</span></label>
-                <label for="slide-2-trigger" class="slider-btn-element waves-effect waves-teal"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i><span>Sign Up</span></label>
-                <label for="slide-3-trigger" class="slider-btn-element waves-effect waves-teal"><i class="fa fa-sign-in fa-2x" aria-hidden="true"></i><span>Log In</span></label>
-                <label for="slide-4-trigger" class="slider-btn-element waves-effect waves-teal"><i class="fa fa-users fa-2x" aria-hidden="true"></i><span>Contact Us</span></label>
-            </nav>
-            <input id="slide-1-trigger" class="hide-me" type="radio" name="slides" checked="true" />
-            <section class="slide slide-one">
-                <header>Section One</header>
-            </section>
-            <input id="slide-2-trigger" class="hide-me" type="radio" name="slides" />
-            <section class="slide slide-two" ng-app="myApp1">
-                <div class="container">
-                    <div id="signup">
-                        <div class="signup-screen">
-                            <div class="space-bot text-center">
-                                <h1>Sign up</h1>
-                                <div class="divider"></div>
-                            </div>
-                            <form class="form-register" method="post" name="register" novalidate ng-controller="RegisterCtrl">
-                                <div class="input-field col s6">
-                                    <input id="first-name" type="text" class="validate" required>
-                                    <label for="first-name">First Name</label>
-                                </div>
-                                <div class="input-field col s6">
-                                    <input id="last-name" type="text" class="validate" required>
-                                    <label for="last-name">Last Name</label>
-                                </div>
-                                <div class="input-field col s6">
-                                    <input id="email" type="email" name="email" ng-model="email" class="validate" required>
-                                    <label for="email">Email</label>
-                                </div>
-                                <p class="alert alert-danger" ng-show="form-register.email.$error.email">Your email is invalid.</p>
-                                <div class="input-field col s6">
-                                    <input id="password" type="password" name="password" ng-model="password" ng-minlength='6' class="validate" required>
-                                    <label for="password">Password</label>
-                                </div>
-                                <p class="alert alert-danger" ng-show="form-register.password.$error.minlength || form.password.$invalid">Your password must be at least 6 characters.</p>
-                                <div class="space-top text-center">
-                                    <button ng-disabled="form-register.$invalid" class="waves-effect waves-light btn done btn-signup">
-                                        <i class="material-icons left">send</i> Submit
-                                    </button>
-                                    <button type="reset" class="waves-effect waves-light btn cancel">
-                                        <i class="material-icons left">clear_all</i>Reset
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <input id="slide-3-trigger" class="hide-me" type="radio" name="slides" />
-            <section class="slide slide-three" ng-app="myApp2">
-                <div class="container">
-                    <div id="login">
-                        <div class="signup-screen">
-                            <div class="space-bot text-center">
-                                <h1>Log In</h1>
-                                <div class="divider"></div>
-                            </div>
-                            <form class="form-login" method="post" name="login" novalidate ng-controller="LoginCtrl">
-                                <div class="input-field col s6">
-                                    <input id="login-id" type="text" name="login-id" ng-model="login-id" class="validate" required>
-                                    <label for="login-id">Email</label>
-                                </div>
-                                <p class="alert alert-danger" ng-show="form-login.login-id.$error.email">Your login ID is invalid.</p>
-                                <div class="input-field col s6">
-                                    <input id="login-password" type="password" name="login-password" ng-model="login-password" ng-minlength='6' class="validate" required>
-                                    <label for="login-password">Password</label>
-                                </div>
-                                <p class="alert alert-danger" ng-show="form-login.login-password.$error.minlength || form-login.login-password.$invalid">Your password must be at least 6 characters.</p>
-                                <div class="space-top text-center">
-                                    <button ng-disabled="form-login.$invalid" class="waves-effect waves-light btn done">
-                                        <i class="material-icons left">send</i> Submit
-                                    </button>
-                                    <button type="reset" class="waves-effect waves-light btn cancel">
-                                        <i class="material-icons left">clear_all</i>Reset
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <input id="slide-4-trigger" class="hide-me" type="radio" name="slides" />
-            <section class="slide slide-four" ng-app="myApp3">
-                <div class="container">
-                    <div id="Contact Us">
-                        <div class="signup-screen">
-                            <div class="space-bot text-center">
-                                <h1>Contact Us <i class="material-icons right">question_answer</i></h1>
-                                <div class="divider"></div>
-                            </div>
-                            <form class="form-contact" method="post" name="login" novalidate ng-controller="ContactCtrl">
-                                <div class="input-field col s6">
-                                    <i class="material-icons prefix">account_circle</i>
-                                    <input id="login-id" type="email" name="login-id" ng-model="login-id" class="validate" required>
-                                    <label for="login-id">Email</label>
-                                </div>
-                                <p class="alert alert-danger" ng-show="form-contact.login-id.$error.email">Your login ID is invalid.</p>
-                                <div class="input-field col s6">
-                                    <i class="material-icons prefix">mode_edit</i>
-                                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                                    <label for="icon_prefix2">Send us a message</label>
-                                </div>
-                                <div class="space-top text-center">
-                                    <button ng-disabled="form-contact.$invalid" class="waves-effect waves-light btn done">
-                                        <i class="material-icons left">email</i> Mail Us
-                                    </button>
-                                    <button type="reset" class="waves-effect waves-light btn cancel">
-                                        <i class="material-icons left">clear_all</i> Reset
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
+  <!--Container-->
+  <div id="content">
+    <!--Slider-->
+    <div class="wrap">
+      <nav class="top-left navigation">
+        <label for="slide-1-trigger" class="slider-btn-element waves-effect waves-teal"><i class="fa fa-home fa-2x" aria-hidden="true"></i><span>Home</span></label>
+        <label for="slide-2-trigger" class="slider-btn-element waves-effect waves-teal"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i><span>Sign Up</span></label>
+        <label for="slide-3-trigger" class="slider-btn-element waves-effect waves-teal"><i class="fa fa-sign-in fa-2x" aria-hidden="true"></i><span>Log In</span></label>
+        <label for="slide-4-trigger" class="slider-btn-element waves-effect waves-teal"><i class="fa fa-users fa-2x" aria-hidden="true"></i><span>Contact Us</span></label>
+      </nav>
+      <input id="slide-1-trigger" class="hide-me" type="radio" name="slides" checked="true" />
+      <section class="slide slide-one">
+        <div class="block block-hero">
+          <div class="block-img">
+            <div id="hero-image" class="hero-phone"></div>
+          </div>
+          <div class="block-inner-text">
+            <header class="h1">Simple, Secure,</header>
+            <header class="h1"><small>Reliable Messenger for your Organisation</small></header>
+            <header>
+              <p class="lead">Easily Connect with your Colleagues and your Students</p>
+            </header>
+          </div>
+          <div class="block-img">
+            <div id="hero-image-bottom" class="hero-phone"></div>
+          </div>
         </div>
+      </section>
+      <input id="slide-2-trigger" class="hide-me" type="radio" name="slides" />
+      <section class="slide slide-two" ng-app="myApp1">
+        <div class="container">
+          <div id="signup">
+            <div class="signup-screen">
+              <div class="space-bot text-center">
+                <h1>Sign up</h1>
+                <div class="divider"></div>
+              </div>
+              <form class="form-register" method="post" name="register" novalidate ng-controller="RegisterCtrl">
+                <div class="input-field col s6">
+                  <input id="first-name" type="text" class="validate" required>
+                  <label for="first-name">First Name</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="last-name" type="text" class="validate" required>
+                  <label for="last-name">Last Name</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="email" type="email" name="email" ng-model="email" class="validate" required>
+                  <label for="email">Email</label>
+                </div>
+                <p class="alert alert-danger" ng-show="form-register.email.$error.email">Your email is invalid.</p>
+                <div class="input-field col s6">
+                  <input id="password" type="password" name="password" ng-model="password" ng-minlength='6' class="validate" required>
+                  <label for="password">Password</label>
+                </div>
+                <p class="alert alert-danger" ng-show="form-register.password.$error.minlength || form.password.$invalid">Your password must be at least 6 characters.</p>
+                <div class="space-top text-center">
+                  <button ng-disabled="form-register.$invalid" class="waves-effect waves-light btn done btn-signup">
+                    <i class="material-icons left">send</i> Submit
+                  </button>
+                  <button type="reset" class="waves-effect waves-light btn cancel">
+                    <i class="material-icons left">clear_all</i>Reset
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <input id="slide-3-trigger" class="hide-me" type="radio" name="slides" />
+      <section class="slide slide-three" ng-app="myApp2">
+        <div class="container">
+          <div id="login">
+            <div class="signup-screen">
+              <div class="space-bot text-center">
+                <h1>Log In</h1>
+                <div class="divider"></div>
+              </div>
+              <form class="form-login" method="post" name="login" novalidate ng-controller="LoginCtrl">
+                <div class="input-field col s6">
+                  <input id="login-id" type="text" name="login-id" ng-model="login-id" class="validate" required>
+                  <label for="login-id">Email</label>
+                </div>
+                <p class="alert alert-danger" ng-show="form-login.login-id.$error.email">Your login ID is invalid.</p>
+                <div class="input-field col s6">
+                  <input id="login-password" type="password" name="login-password" ng-model="login-password" ng-minlength='6' class="validate" required>
+                  <label for="login-password">Password</label>
+                </div>
+                <p class="alert alert-danger" ng-show="form-login.login-password.$error.minlength || form-login.login-password.$invalid">Your password must be at least 6 characters.</p>
+                <div class="space-top text-center">
+                  <button ng-disabled="form-login.$invalid" class="waves-effect waves-light btn done">
+                    <i class="material-icons left">send</i> Submit
+                  </button>
+                  <button type="reset" class="waves-effect waves-light btn cancel">
+                    <i class="material-icons left">clear_all</i> Reset
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <input id="slide-4-trigger" class="hide-me" type="radio" name="slides" />
+      <section class="slide slide-four" ng-app="myApp3">
+        <div class="container">
+          <div id="Contact Us">
+            <div class="signup-screen">
+              <div class="space-bot text-center">
+                <h1>Contact Us <i class="material-icons right">question_answer</i></h1>
+                <div class="divider"></div>
+              </div>
+              <form class="form-contact" method="post" name="login" novalidate ng-controller="ContactCtrl">
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input id="login-id" type="email" name="login-id" ng-model="login-id" class="validate" required>
+                  <label for="login-id">Email</label>
+                </div>
+                <p class="alert alert-danger" ng-show="form-contact.login-id.$error.email">Your login ID is invalid.</p>
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">mode_edit</i>
+                  <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                  <label for="icon_prefix2">Send us a message</label>
+                </div>
+                <div class="space-top text-center">
+                  <button ng-disabled="form-contact.$invalid" class="waves-effect waves-light btn done">
+                    <i class="material-icons left">email</i> Mail Us
+                  </button>
+                  <button type="reset" class="waves-effect waves-light btn cancel">
+                    <i class="material-icons left">clear_all</i> Reset
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-    <!--Scripts-->
-    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-    <script src="js/form.js"></script>
+  </div>
+  <!--Scripts-->
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script src="js/form.js"></script>
 </body>
 
 </html>

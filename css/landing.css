@@ -1,0 +1,58 @@
+.block-inner-text .lead {
+  padding: 0.5em;
+  padding-top: 1em;
+}
+
+#hero-image,
+#hero-image-bottom {
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .block-hero .block-inner-text {
+    vertical-align: middle;
+    padding-right: 40px;
+    text-align: center;
+    transform: translateY(50px);
+  }
+}
+
+@media (max-width: 767px) {
+  .block-hero .block-inner-text {
+    padding-top: 10px;
+    padding-right: 35px;
+    padding-left: 35px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  #hero-image {
+    background-image: url('https://www.cdn.whatsapp.net/img/v4/home-phone-mobile.png?v=0f8f8aa');
+    width: 308px;
+    height: 554px;
+    float: left;
+  }
+  #hero-image-bottom {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  #hero-image-bottom {
+    background-image: url('https://www.cdn.whatsapp.net/img/v4/home-phone-mobile.png?v=0f8f8aa');
+    width: 308px;
+    height: 554px;
+    display: block;
+    margin: auto;
+  }
+  #hero-image {
+    display: none;
+  }
+}
+
+header.h1 small {
+  color: #000;
+}

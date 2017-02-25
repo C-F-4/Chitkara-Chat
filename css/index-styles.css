@@ -22,3 +22,7 @@ nav a {
     text-decoration: none;
     -moz-text-decoration: none;
 }
+
+body {
+  min-width: 300px;
+}

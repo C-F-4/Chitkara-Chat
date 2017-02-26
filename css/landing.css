@@ -56,3 +56,17 @@
 header.h1 small {
   color: #000;
 }
+
+  .slide-one header {
+    font-weight: 600 !important;
+  }
+
+  .slide-one header small {
+    font-weight: 600 !important;
+    font-size: 80% !important;
+  }
+
+  .slide-one p {
+    font-size: x-large !important;
+    font-weight: 500 !important;
+  }

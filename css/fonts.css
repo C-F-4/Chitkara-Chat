@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond|Forum');
+  header, header small {
+    font-family: 'Forum', cursive !important;
+  }
+
+  p {
+    font-family: 'EB Garamond', serif !important;
+  }

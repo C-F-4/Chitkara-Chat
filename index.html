@@ -43,6 +43,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   <script src="js/index-scripts.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 </head>
 
 <body>
@@ -83,7 +84,7 @@
         </div>
       </section>
       <input id="slide-2-trigger" class="hide-me" type="radio" name="slides" />
-      <section class="slide slide-two" ng-app="myApp1">
+      <section class="slide slide-two" id="signup-app">
         <div class="container">
           <div id="signup">
             <div class="signup-screen">
@@ -91,27 +92,31 @@
                 <h1>Sign up</h1>
                 <div class="divider"></div>
               </div>
-              <form class="form-register" method="post" name="register" novalidate ng-controller="RegisterCtrl">
+              <form id="form-1-index" class="form-register" name="form_register" method="post" novalidate="novalidate" ng-controller="RegisterCtrl" ng-submit="validate(user)">
                 <div class="input-field col s6">
-                  <input id="first-name" type="text" class="validate" required>
-                  <label for="first-name">First Name</label>
+                  <input id="user-roll" class="validate" name="user_roll" type="text" required="required" ng-model="user.signup_roll" ng-pattern="/^[a-z0-9 -]+$/i">
+                  <label for="user-roll">University ID</label>
                 </div>
+                <p class="alert alert-danger" ng-show="form_register.user_roll.$error.pattern">Your University ID is invalid.</p>
                 <div class="input-field col s6">
-                  <input id="last-name" type="text" class="validate" required>
-                  <label for="last-name">Last Name</label>
+                  <input id="user-fn" class="validate" name="user_fn" type="text" required="required" ng-model="user.signup_fn" ng-pattern="/^[a-z ,.'-]+$/i" ng-minlength="2">
+                  <label for="user-fn">Full Name</label>
                 </div>
+                <p class="alert alert-danger" ng-show="form_register.user_fn.$error.pattern">Full Name is invalid. Try removing numbers and Special Characters.</p>
                 <div class="input-field col s6">
-                  <input id="email" type="email" name="email" ng-model="email" class="validate" required>
-                  <label for="email">Email</label>
+                  <input id="user-email" class="validate" name="user_email" type="email" required="required" ng-model="user.signup_email">
+                  <label for="user-email">Email</label>
                 </div>
-                <p class="alert alert-danger" ng-show="form-register.email.$error.email">Your email is invalid.</p>
+                <p class="alert alert-danger" ng-show="form_register.user_email.$error.email">Your email should be of the format user@domain(.com)</p>
                 <div class="input-field col s6">
-                  <input id="password" type="password" name="password" ng-model="password" ng-minlength='6' class="validate" required>
+                  <input id="password" class="validate" name="user_password" type="password" required="required" ng-model="user.signup_password" ng-pattern="/^.*(?=.{8,120})(?!.*\s)(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\!\@\#\$\%\^\&\*\(\)\-\=\¡\£\_\+\`\~\.\,\<\>\/\?\;\:\'\\\|\[\]\{\}]).*$/" ng-minlength="8" ng-maxlength="24">
                   <label for="password">Password</label>
                 </div>
-                <p class="alert alert-danger" ng-show="form-register.password.$error.minlength || form.password.$invalid">Your password must be at least 6 characters.</p>
+                <p class="alert alert-danger" ng-show="form_register.user_password.$error.minlength">Your password must be at least 8 characters.</p>
+                <p class="alert alert-danger" ng-show="form_register.user_password.$error.maxlength">Your password must be at most 24 characters.</p>
+                <p class="alert alert-danger" ng-show="form_register.user_password.$error.pattern">Your password must contain atleast one Uppercase, one lowercase, one numeral, and one special character</p>
                 <div class="space-top text-center">
-                  <button ng-disabled="form-register.$invalid" class="waves-effect waves-light btn done btn-signup">
+                  <button ng-disabled="form_register.$invalid" class="waves-effect waves-light btn done btn-signup">
                     <i class="material-icons left">send</i> Submit
                   </button>
                   <button type="reset" class="waves-effect waves-light btn cancel">
@@ -124,7 +129,7 @@
         </div>
       </section>
       <input id="slide-3-trigger" class="hide-me" type="radio" name="slides" />
-      <section class="slide slide-three" ng-app="myApp2">
+      <section class="slide slide-three" id="login-app">
         <div class="container">
           <div id="login">
             <div class="signup-screen">
@@ -132,22 +137,24 @@
                 <h1>Log In</h1>
                 <div class="divider"></div>
               </div>
-              <form class="form-login" method="post" name="login" novalidate ng-controller="LoginCtrl">
+              <form id="form-2-index" class="form-login" name="form_login" method="post" novalidate="novalidate" ng-controller="LoginCtrl" ng-submit="validate(master)">
                 <div class="input-field col s6">
-                  <input id="login-id" type="text" name="login-id" ng-model="login-id" class="validate" required>
+                  <input id="login-id" class="validate" name="login_id" type="email" required="required" ng-model="master.login_id">
                   <label for="login-id">Email</label>
                 </div>
-                <p class="alert alert-danger" ng-show="form-login.login-id.$error.email">Your login ID is invalid.</p>
+                <p class="alert alert-danger" ng-show="form_login.login_id.$error.email">Your login ID is invalid.</p>
                 <div class="input-field col s6">
-                  <input id="login-password" type="password" name="login-password" ng-model="login-password" ng-minlength='6' class="validate" required>
+                  <input id="login-password" class="validate" name="login_password" type="password" required="required" ng-model="master.login_password" ng-pattern="/^.*(?=.{8,120})(?!.*\s)(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\!\@\#\$\%\^\&\*\(\)\-\=\¡\£\_\+\`\~\.\,\<\>\/\?\;\:\'\\\|\[\]\{\}]).*$/" ng-minlength="8" ng-maxlength="24">
                   <label for="login-password">Password</label>
                 </div>
-                <p class="alert alert-danger" ng-show="form-login.login-password.$error.minlength || form-login.login-password.$invalid">Your password must be at least 6 characters.</p>
+                <p class="alert alert-danger" ng-show="form_login.login_password.$error.minlength">Your password must be at least 8 characters.</p>
+                <p class="alert alert-danger" ng-show="form_login.login_password.$error.maxlength">Your password must be at most 24 characters.</p>
+                <p class="alert alert-danger" ng-show="form_login.login_password.$error.pattern">Your password must contain atleast one Uppercase, one lowercase, one numeral, and one special character</p>
                 <div class="space-top text-center">
-                  <button ng-disabled="form-login.$invalid" class="waves-effect waves-light btn done">
+                  <button class="waves-effect waves-light btn done" ng-disabled="form_login.$invalid">
                     <i class="material-icons left">send</i> Submit
                   </button>
-                  <button type="reset" class="waves-effect waves-light btn cancel">
+                  <button class="waves-effect waves-light btn cancel" type="reset">
                     <i class="material-icons left">clear_all</i> Reset
                   </button>
                 </div>
@@ -157,7 +164,7 @@
         </div>
       </section>
       <input id="slide-4-trigger" class="hide-me" type="radio" name="slides" />
-      <section class="slide slide-four" ng-app="myApp3">
+      <section class="slide slide-four" id="contact-app">
         <div class="container">
           <div id="Contact Us">
             <div class="signup-screen">
@@ -165,23 +172,24 @@
                 <h1>Contact Us <i class="material-icons right">question_answer</i></h1>
                 <div class="divider"></div>
               </div>
-              <form class="form-contact" method="post" name="login" novalidate ng-controller="ContactCtrl">
+              <form id="form-3-index" class="form-contact" name="form_contact" method="post" novalidate="novalidate" ng-controller="ContactCtrl">
                 <div class="input-field col s6">
                   <i class="material-icons prefix">account_circle</i>
-                  <input id="login-id" type="email" name="login-id" ng-model="login-id" class="validate" required>
-                  <label for="login-id">Email</label>
+                  <input id="guest-email-id" class="validate" name="guest_email_id" type="email" required="required" ng-model="guest.email_id">
+                  <label for="guest-email-id">Email</label>
                 </div>
-                <p class="alert alert-danger" ng-show="form-contact.login-id.$error.email">Your login ID is invalid.</p>
+                <p class="alert alert-danger" ng-show="form_contact.guest_email_id.$error.email">Your Email ID is invalid.</p>
                 <div class="input-field col s6">
                   <i class="material-icons prefix">mode_edit</i>
-                  <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                  <label for="icon_prefix2">Send us a message</label>
+                  <textarea id="guest-query-text" class="materialize-textarea validate" name="guest_query_text" ng-model="guest.query_text" required></textarea>
+                  <label for="guest-query-text">Send us a message</label>
                 </div>
+                <p class="alert alert-danger" ng-show="form-contact.guest_query_text.$error.email">Subject Query is invalid.</p>
                 <div class="space-top text-center">
-                  <button ng-disabled="form-contact.$invalid" class="waves-effect waves-light btn done">
+                  <button class="waves-effect waves-light btn done" ng-disabled="form_contact.$invalid" ng-click="validate(guest)">
                     <i class="material-icons left">email</i> Mail Us
                   </button>
-                  <button type="reset" class="waves-effect waves-light btn cancel">
+                  <button class="waves-effect waves-light btn cancel" type="reset">
                     <i class="material-icons left">clear_all</i> Reset
                   </button>
                 </div>
@@ -195,7 +203,6 @@
   <!--Scripts-->
   <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
   <script src="js/form.js"></script>
 </body>
 

@@ -1,0 +1,56 @@
+
+//user contact list
+db.createCollection("userContactList",
+{ validator:{ $or: [
+{userId:{$type:"binData"}} ] },
+ validationAction:"error",
+  validationLevel: "moderate" } )
+
+//login
+
+db.createCollection("Login", {
+validator:{   "$or":
+[
+{       "rollNo": {         "$type": "string"       }     },
+{       "fullName": {         "$type": "string"       }     },
+{       "email": {         "$regex": /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/}            },
+{       "password": {         "$type": "string"       }     },
+{       "userId": {         "$type": "string"       }     }
+]} ,
+validationAction:"error",
+ validationLevel: "moderate" })
+
+
+
+//userSettings
+db.createCollection("Settings", {
+validator:{   "$or":
+[
+{"profileName":{"$type":"string"}},
+{"themeSettings":{"$type":"string"}},
+{"userId":{"$type":"string"}},
+{"college":{"$type":"string"}},
+{"acountDeactivate":{"$type":"string"}},
+{"emailPreferences":{"$type":"string"}},
+{"passwordPreferences":{"$type":"string"}}
+]} ,
+validationAction:"error",
+ validationLevel: "moderate" })
+
+
+//Signup
+db.createCollection("SignUp", {
+validator:{   "$or":
+[
+{       "rollNo": {         "$type": "string"       }     },
+{       "fullName": {         "$type": "string"       }     },
+{       "email": {         "$regex": /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/}            },
+{       "password": {         "$type": "string"       }     },
+{"userToken":{"$type":"string"}},
+{       "userId": {         "$type": "string"       }     }
+]} ,
+validationAction:"error",
+ validationLevel: "moderate" })
+
+
+ ////

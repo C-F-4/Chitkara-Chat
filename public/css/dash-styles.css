@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+    z-index: 4;
+    height: 44px;
+    background-color: #ddd;
+    border-bottom: 3px solid #2d3d51
+}
+
+.user-card {
+
+}
+
+.profile-picture {
+    height: 40px;
+    width: 40px;
+}
+
+.side-nav {
+    position: absolute;
+    width: 100%;
+    background-color: #aaa;
+    height: 100vh;
+    z-index: 3;
+    padding-top: 44px;
+}
+
+.message-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.message-list .user-message-card {
+    padding: 20px 10px;
+    border-bottom: 1px solid #333;
+}
+
+.message-list .user-message-card a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.message-list .user-message-card .user-img {
+    width: 40px;
+    height: 40px;
+}
+
+.img-circle {
+    border-radius: 50%;
+}

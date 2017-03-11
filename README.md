@@ -1,5 +1,5 @@
 # Chitkara-Chat
-Chatting Application created for Easy Communication inside a University or a School or any other for of Educational System
+A Platform curated to be used inside Educational Institution
 
 # Issues
 Using Tab key can easily hover over form elements. Since the Slides are created using Radio. It also hovers through that.

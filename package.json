@@ -1,8 +1,8 @@
 {
   "name": "chitkara-chat",
   "version": "1.0.0",
-  "description": "Chatting Application specially design for Chitkarians",
-  "main": "index.js",
+  "description": "A communication Platform designed for Educational Institution",
+  "main": "app.js",
   "dependencies": {
     "angular": "^1.6.2",
     "bcryptjs": "^2.4.3",
@@ -38,7 +38,8 @@
     "\"chatting\"",
     "\"web-app\""
   ],
-  "author": "",
+  "private": "true",
+  "author": "Abhinav S",
   "license": "AGPL-3.0",
   "bugs": {
     "url": "https://github.com/C-F-4/Chitkara-Chat/issues"

@@ -14,6 +14,8 @@ var session = require('express-session');
 var app = express();
 const port = process.env.PORT || 8000;
 
+app.use(express.static(__dirname + '/public'));
+
 var routes = require('./routes/route.js');
 app.use('/', routes);
 

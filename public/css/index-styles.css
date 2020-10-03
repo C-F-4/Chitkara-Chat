@@ -15,14 +15,13 @@ body {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 35px;
 }
 
 nav a {
-    text-decoration: none;
-    -moz-text-decoration: none;
+    text-decoration: underline;
 }
 
 body {
-  min-width: 300px;
+  min-width: 350px;
 }

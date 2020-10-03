@@ -1,6 +1,6 @@
 .block-inner-text .lead {
-  padding: 0.5em;
-  padding-top: 1em;
+  padding: 0.3em;
+  padding-top: 0.1em;
 }
 
 #hero-image,
@@ -44,7 +44,7 @@
   #hero-image-bottom {
     background-image: url('https://www.cdn.whatsapp.net/img/v4/home-phone-mobile.png?v=0f8f8aa');
     width: 308px;
-    height: 554px;
+    height: 500px;
     display: block;
     margin: auto;
   }
@@ -58,15 +58,15 @@ header.h1 small {
 }
 
   .slide-one header {
-    font-weight: 600 !important;
+    font-weight: 500 !important;
   }
 
   .slide-one header small {
-    font-weight: 600 !important;
+    font-weight: 400 !important;
     font-size: 80% !important;
   }
 
   .slide-one p {
     font-size: x-large !important;
-    font-weight: 500 !important;
+    font-weight: 400 !important;
   }

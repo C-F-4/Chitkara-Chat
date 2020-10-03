@@ -15,7 +15,7 @@
 h1 {
     color: white;
     text-transform: uppercase;
-    font-weight: 900;
+    font-weight: 910;
     font-size: 25px;
     text-align: center;
 }
@@ -23,7 +23,7 @@ h1 {
 /* Sign Up */
 
 .container {
-    max-width: 400px;
+    max-width: 450px;
     max-height: 100px;
     margin-top: 10px;
 }
@@ -42,7 +42,7 @@ h1 {
 }
 
 .btn{
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 .cancel{
@@ -93,7 +93,7 @@ h1 {
 
 .help-block {
     font-size: 12px;
-    color: white
+    color: white;
 }
 
 .btn-signup {
@@ -104,8 +104,8 @@ h1 {
 }
 
 .btn-signup:after {
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   background: #fff;
   color: #2c3940;
   height: 100%;
@@ -145,5 +145,5 @@ h1 {
 }
 
 form textarea {
-  max-height: 21px;
+  max-height: 20px;
 }
